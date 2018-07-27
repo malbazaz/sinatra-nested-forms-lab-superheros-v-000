@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Student</title>
+    <title>SuperHero Team</title>
   </head>
 
   <body>
-    <h1>Student</h1>
 
-  <div class="student">
-    <h3>Name: <%= @student.name %></h3><br>
-    <h4>Grade: <%= @student.grade %></h4>
+  <div class="team-class">
+    <h1><%= @team.name %></h1><br>
+    <h2>Team Motto: <%= @team.motto %></h2>
   </div><br>
 
-  <h1>Courses</h1>
-  <% @courses.each do |course| %>
+  <% @courses.each do |hero| %>
     <div class="course">
-      <p>Name: <%= course.name %></p><br>
-      <p>Topic: <%= course.topic %></p><br>
+      <h2> Hero Name: <%= hero.name %></h2><br>
+      <p>Hero Power: <%= hero.topic %></p><br>
+      <p>Hero Biography:<%= hero.topic %></p><br>
     </div><br>
   <% end %>
 
