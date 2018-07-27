@@ -8,9 +8,9 @@ class App < Sinatra::Base
       erb :index
     end
 
-    post "/teams" do
+    post "/team" do
       @team = Team.new(params[:team])
-      params[:team][:superhero].each do |details|
+      params[:team][:superheroes].each do |details|
       Hero.new(details)
       end
       @heroes = Hero.all
